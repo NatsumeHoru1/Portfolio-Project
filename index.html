@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Nhat Ho Anh - Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="theme-toggle">
+    <input type="checkbox" id="theme-switch" />
+    <label for="theme-switch"></label>
+  </div>
+
+  <header>
+    <nav>
+      <div class="logo">Nhat Ho Anh</div>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="hero">
+      <h1>Hi, I'm <span>Nhat Ho Anh</span></h1>
+      <p>Front-End Developer & UI/UX Enthusiast</p>
+      <a href="#projects" class="btn">See Nhat's Work</a>
+    </div>
+  </header>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p>I’m a passionate web developer currently studying web design. I love creating clean, responsive, and user-friendly websites using modern HTML & CSS. This portfolio showcases everything I’ve learned this semester!</p>
+  </section>
+
+  <section id="projects">
+    <h2>My Projects</h2>
+    <div class="grid">
+      <div class="card">
+        <img src="https://via.placeholder.com/600x400" alt="Project 1">
+        <h3>Color Gallery</h3>
+        <p>Fully responsive CSS Grid gallery with 4 breakpoints.</p>
+        <a href="#" class="btn">View Live</a>
+      </div>
+      <div class="card">
+        <img src="https://via.placeholder.com/600x400" alt="Project 2">
+        <h3>Restaurant Menu</h3>
+        <p>Mobile-first design with smooth animations.</p>
+        <a href="#" class="btn">View Live</a>
+      </div>
+      <div class="card">
+        <img src="https://via.placeholder.com/600x400" alt="Project 3">
+        <h3>Todo App</h3>
+        <p>Vanilla JS interactive app with local storage.</p>
+        <a href="#" class="btn">View Live</a>
+      </div>
+      <div class="card">
+        <img src="https://via.placeholder.com/600x400" alt="Project 4">
+        <h3>Landing Page</h3>
+        <p>Modern one-page site with hero & CTA.</p>
+        <a href="#" class="btn">View Live</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Get In Touch</h2>
+    <form action="https://formspree.io/f/YOUR_CODE" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <textarea name="message" placeholder="Your Message" required></textarea>
+      <button type="submit" class="btn">Send Message</button>
+    </form>
+  </section>
+
+  <a href="#top" class="back-to-top">↑</a>
+
+  <footer>
+    <p>© 2025 Nhat Ho Anh. Made with love & HTML/CSS.</p>
+  </footer>
+
+  <script>
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+
+    const toggle = document.getElementById('theme-switch');
+    toggle.addEventListener('change', () => {
+      document.body.classList.toggle('dark-mode');
+    });
+  </script>
+</body>
+</html>
